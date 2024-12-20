@@ -1,0 +1,34 @@
+<h1>test
+</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom de la recette</th>
+      <th>Description</th>
+      <th>Nom de l'ingrédient</th>
+      <th>Quantité</th>
+      <th>Unité</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (recipe of recipe; track recipe.id) {
+      <tr>
+          <td>{{ recipe.name }}</td>
+          <td>{{ recipe.description }}</td>
+
+      @for (ingredient of recipe.ingredients; track ingredient.id) {
+
+
+          <td>{{ ingredient.name }}</td>
+          <td>{{ ingredient.quantity }}</td>
+          <td>{{ ingredient.unit }}</td>
+
+      }
+      </tr>
+    }
+  </tbody>
+</table>
+
+
+<p style="font-size:250px"> BON APPETIT 🍕 </p>
